@@ -1,0 +1,1 @@
+alert("NEXTGEN SOLAR JS WORKING");

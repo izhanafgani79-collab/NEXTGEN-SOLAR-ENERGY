@@ -1,0 +1,5149 @@
+
+<style>
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5fbf7;
+  color: #123d25;
+}
+  /* NEXTGEN NAVBAR */
+
+.navbar {
+  width: 100%;
+  min-height: 78px;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid #dcebe1;
+  position: relative;
+  z-index: 100;
+}
+
+.brand-logo {
+  width: 180px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.brand-logo img {
+  width: 180px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #355443;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-btn {
+  border: none;
+  padding: 13px 20px;
+  border-radius: 9px;
+  background: linear-gradient(135deg,#16a34a,#087ea4);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .navbar {
+    min-height: 72px;
+    padding: 8px 15px;
+  }
+
+  .brand-logo {
+    width: 155px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .brand-logo img {
+    width: 155px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-btn {
+    padding: 11px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+/* HERO */
+
+.hero {
+  min-height: 650px;
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  background:
+    radial-gradient(circle at 85% 15%, #fff0a8, transparent 20%),
+    radial-gradient(circle at 100% 90%, #bceeff, transparent 30%),
+    linear-gradient(135deg,#effff5,#e8f8ff);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 9px 15px;
+  border-radius: 30px;
+  background: #dcfce7;
+  color: #16803c;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(45px,5vw,72px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg,#16a34a,#087ea4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 570px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #617269;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  border: none;
+  padding: 15px 23px;
+  border-radius: 9px;
+  background: linear-gradient(135deg,#16a34a,#087ea4);
+  color: white;
+  font-weight: 700;
+}
+
+.secondary-btn {
+  padding: 15px 23px;
+  border-radius: 9px;
+  border: 1px solid #bcd4c3;
+  background: white;
+  color: #167a38;
+  font-weight: 700;
+}
+
+.trust {
+  display: flex;
+  gap: 40px;
+  margin-top: 45px;
+}
+
+.trust div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trust strong {
+  font-size: 25px;
+  color: #123d25;
+}
+
+.trust small {
+  color: #718078;
+}
+
+
+/* SOLAR VISUAL */
+
+.hero-visual {
+  width: 430px;
+  height: 430px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 75px;
+  animation: sunMove 4s infinite ease-in-out;
+}
+
+@keyframes sunMove {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.solar-house {
+  position: relative;
+  width: 340px;
+  height: 290px;
+  margin-top: 80px;
+}
+
+.roof {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 290px;
+  height: 150px;
+  background: linear-gradient(135deg,#172f45,#087ea4);
+  transform: skewY(-25deg);
+  border-radius: 12px;
+}
+
+.panels {
+  position: absolute;
+  top: 35px;
+  left: 45px;
+  width: 245px;
+  height: 110px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 7px;
+  transform: skewY(-25deg);
+  z-index: 2;
+}
+
+.panels div {
+  background: linear-gradient(135deg,#075985,#123c64);
+  border: 2px solid #4d89a5;
+  border-radius: 4px;
+}
+
+.house-body {
+  position: absolute;
+  left: 55px;
+  top: 135px;
+  width: 235px;
+  height: 145px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba(30,60,40,.15);
+}
+
+.window {
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  width: 55px;
+  height: 48px;
+  background: #bde5f5;
+  border: 5px solid #244d5d;
+}
+
+.door {
+  position: absolute;
+  right: 38px;
+  bottom: 0;
+  width: 48px;
+  height: 90px;
+  background: #875d3d;
+}
+
+
+/* GENERAL SECTIONS */
+
+.solutions,
+.packages {
+  padding: 90px 7%;
+}
+
+.solutions {
+  background:
+    radial-gradient(circle at 10% 20%,#e7fff0,transparent 25%),
+    radial-gradient(circle at 90% 80%,#e5f8ff,transparent 25%),
+    #f8fbfa;
+}
+
+.packages {
+  background: linear-gradient(180deg,#ffffff,#f3fbf6);
+}
+
+.section-label {
+  color: #087ea4;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.solutions-heading,
+.packages-heading {
+  max-width: 650px;
+  margin-bottom: 50px;
+}
+
+.solutions-heading h2,
+.packages-heading h2 {
+  margin-top: 14px;
+  font-size: 46px;
+  line-height: 1.15;
+}
+
+.solutions-heading h2 span,
+.packages-heading h2 span {
+  background: linear-gradient(90deg,#16a34a,#087ea4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solutions-heading p,
+.packages-heading p {
+  margin-top: 18px;
+  color: #68766e;
+  line-height: 1.7;
+}
+
+
+/* SOLUTION CARDS */
+
+.solution-cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.solution-card {
+  position: relative;
+  padding: 35px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #e0ebe4;
+  box-shadow: 0 12px 35px rgba(20,50,30,.07);
+  transition: .3s;
+}
+
+.solution-card:hover {
+  transform: translateY(-8px);
+}
+
+.solution-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.solution-card:nth-child(1) .solution-icon {
+  background: #dcfce7;
+}
+
+.solution-card:nth-child(2) .solution-icon {
+  background: #dff7ff;
+}
+
+.solution-card:nth-child(3) .solution-icon {
+  background: #fff3c4;
+}
+
+.solution-card h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.solution-card p {
+  color: #68766e;
+  line-height: 1.7;
+}
+
+.solution-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.solution-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #edf2ee;
+  color: #456052;
+}
+
+.solution-btn {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #bcd4c3;
+  background: white;
+  color: #167a38;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+
+/* PACKAGES */
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 16px;
+}
+
+.package-card {
+  padding: 27px 20px;
+  border: 1px solid #e2ebe5;
+  border-radius: 16px;
+  background: white;
+  transition: .3s;
+}
+
+.package-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 35px rgba(8,126,164,.12);
+}
+
+.package-card:nth-child(1) {
+  border-top: 4px solid #60a5fa;
+}
+
+.package-card:nth-child(2) {
+  border-top: 4px solid #22c55e;
+}
+
+.package-card:nth-child(3) {
+  border-top: 4px solid #fbbf24;
+}
+
+.package-card:nth-child(4) {
+  border-top: 4px solid #16a34a;
+}
+
+.package-card:nth-child(5) {
+  border-top: 4px solid #087ea4;
+}
+
+.package-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.package-top span {
+  font-size: 10px;
+  color: #16a34a;
+  font-weight: 800;
+}
+
+.package-top strong {
+  font-size: 34px;
+}
+
+.package-card h3 {
+  font-size: 18px;
+}
+
+.package-for {
+  margin-top: 8px;
+  color: #718078;
+  font-size: 13px;
+  min-height: 45px;
+}
+
+.package-info {
+  margin-top: 18px;
+}
+
+.package-info div {
+  padding: 10px 0;
+  border-bottom: 1px solid #e5ece7;
+}
+
+.package-info span {
+  display: block;
+  font-size: 10px;
+  color: #849188;
+}
+
+.package-info b {
+  font-size: 12px;
+}
+
+.package-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg,#16a34a,#087ea4);
+  color: white;
+  font-weight: 700;
+}
+
+
+/* SUBSIDY */
+
+.subsidy {
+  padding: 100px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: linear-gradient(135deg,#063b29,#075985);
+  color: white;
+}
+
+.subsidy-content {
+  max-width: 650px;
+}
+
+.subsidy h2 {
+  margin-top: 15px;
+  font-size: 48px;
+}
+
+.subsidy h2 span {
+  color: #fbbf24;
+}
+
+.subsidy-content > p {
+  margin-top: 20px;
+  color: #d4e8dd;
+  line-height: 1.7;
+}
+
+.subsidy-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.subsidy-btn {
+  margin-top: 30px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(90deg,#fbbf24,#f97316);
+  font-weight: 800;
+}
+
+.subsidy-card {
+  width: 350px;
+  padding: 40px;
+  text-align: center;
+  background: white;
+  color: #123d25;
+  border-radius: 22px;
+  border-top: 6px solid #fbbf24;
+}
+
+.subsidy-card strong {
+  display: block;
+  margin: 12px 0;
+  font-size: 48px;
+  color: #16a34a;
+}
+
+.subsidy-card p {
+  color: #68766e;
+  line-height: 1.6;
+}
+
+.subsidy-note {
+  margin-top: 20px;
+  color: #89958d;
+  font-size: 10px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .trust {
+    justify-content: center;
+  }
+
+  .solution-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subsidy {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subsidy-points {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .subsidy-card {
+    width: 100%;
+    max-width: 380px;
+  }
+
+}
+  
+
+/* ================= PROJECTS ================= */
+
+.projects {
+  padding: 90px 20px;
+  background: #f7faf8;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-heading {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.projects-heading .section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #16a34a;
+  margin-bottom: 14px;
+}
+
+.projects-heading h2 {
+  margin: 0;
+  font-size: clamp(34px, 6vw, 54px);
+  line-height: 1.1;
+  color: #10251a;
+  font-weight: 800;
+}
+
+.projects-heading h2 span {
+  color: #16a34a;
+}
+
+.projects-heading p {
+  margin: 18px auto 0;
+  max-width: 620px;
+  color: #68766e;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* PROJECT GRID */
+
+.project-grid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #e5ece7;
+  box-shadow: 0 12px 35px rgba(20, 60, 35, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(20, 60, 35, 0.14);
+}
+
+
+/* IMAGE */
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 245px;
+  overflow: hidden;
+  background: #e8eee9;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.06);
+}
+
+
+/* BADGE */
+
+.project-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 8px 13px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #15803d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* CONTENT */
+
+.project-content {
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.project-type {
+  display: block;
+  margin-bottom: 8px;
+  color: #16a34a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.project-content h3 {
+  margin: 0;
+  color: #10251a;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.project-content p {
+  margin: 9px 0 0;
+  color: #718078;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* CAPACITY */
+
+.project-capacity {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #ecfdf3;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* STATS */
+
+.project-stats {
+  max-width: 1180px;
+  margin: 55px auto 0;
+  padding: 28px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: #10251a;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(16, 37, 26, 0.14);
+}
+
+.stat-box {
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-box:last-child {
+  border-right: none;
+}
+
+.stat-box strong {
+  display: block;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.stat-box span {
+  display: block;
+  margin-top: 5px;
+  color: #b8c8bf;
+  font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .projects {
+    padding: 70px 16px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .project-image {
+    height: 210px;
+  }
+
+  .project-content {
+    padding: 17px;
+  }
+
+  .project-content h3 {
+    font-size: 16px;
+  }
+
+  .project-content p {
+    font-size: 12px;
+  }
+
+  .project-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-box:nth-child(2) {
+    border-right: none;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .projects {
+    padding: 60px 14px;
+  }
+
+  .projects-heading {
+    margin-bottom: 35px;
+  }
+
+  .projects-heading h2 {
+    font-size: 34px;
+  }
+
+  .projects-heading p {
+    font-size: 14px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-image {
+    height: 240px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-content h3 {
+    font-size: 18px;
+  }
+
+  .project-content p {
+    font-size: 13px;
+  }
+
+  .project-stats {
+    margin-top: 35px;
+    padding: 20px 10px;
+    gap: 8px;
+  }
+
+  .stat-box {
+    padding: 12px 5px;
+  }
+
+  .stat-box strong {
+    font-size: 25px;
+  }
+
+  .stat-box span {
+    font-size: 11px;
+  }
+
+}
+  .calculator {
+  padding: 90px 7%;
+  background: linear-gradient(135deg, #f0fff5, #e9f9ff);
+}
+
+.calculator-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.calculator-heading h2 {
+  margin-top: 14px;
+  font-size: 44px;
+  line-height: 1.15;
+  color: #073b2a;
+}
+
+.calculator-heading h2 span {
+  background: linear-gradient(90deg, #16a34a, #087ea4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.calculator-heading p {
+  margin-top: 15px;
+  color: #68766e;
+  line-height: 1.7;
+}
+
+.calculator-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+}
+
+.calculator-input,
+.calculator-result {
+  padding: 35px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #dcebe2;
+  box-shadow: 0 15px 40px rgba(20, 60, 40, 0.08);
+}
+
+.calculator-input label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  color: #365443;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.calculator-input label:first-child {
+  margin-top: 0;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbded2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.input-wrap span {
+  padding-left: 15px;
+  color: #16a34a;
+  font-weight: 800;
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.calculator-input select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbded2;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+.calculate-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #16a34a, #087ea4);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.calculator-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(145deg, #073b2a, #075985);
+  color: white;
+}
+
+.result-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.calculator-result > span {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #bdebd0;
+  font-weight: 800;
+}
+
+.calculator-result > strong {
+  margin: 10px 0;
+  font-size: 48px;
+  color: #fbbf24;
+}
+
+.calculator-result > p {
+  color: #d1e7dc;
+  line-height: 1.6;
+}
+
+.result-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.result-details div {
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.result-details small {
+  display: block;
+  color: #b9d8c7;
+  font-size: 10px;
+}
+
+.result-details b {
+  display: block;
+  margin-top: 5px;
+  color: white;
+}
+
+@media(max-width: 750px) {
+  .calculator {
+    padding: 70px 5%;
+  }
+
+  .calculator-heading h2 {
+    font-size: 35px;
+  }
+
+  .calculator-box {
+    grid-template-columns: 1fr;
+  }
+}
+  /* =========================
+   FREE SITE SURVEY
+========================= */
+
+.survey {
+  padding: 90px 7%;
+  background: white;
+}
+
+.survey-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.survey-heading h2 {
+  margin-top: 14px;
+  font-size: 44px;
+  line-height: 1.15;
+  color: #073b2a;
+}
+
+.survey-heading h2 span {
+  background: linear-gradient(90deg,#16a34a,#087ea4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.survey-heading p {
+  margin-top: 15px;
+  color: #68766e;
+  line-height: 1.7;
+}
+
+.survey-form {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 35px;
+  background: linear-gradient(135deg,#f0fff5,#eefaff);
+  border: 1px solid #dcebe2;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(20,60,40,.08);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #365443;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbded2;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22,163,74,.10);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.survey-btn {
+  grid-column: 1 / -1;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg,#16a34a,#087ea4);
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(22,163,74,.18);
+}
+
+.survey-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media(max-width:700px) {
+
+  .survey {
+    padding: 70px 5%;
+  }
+
+  .survey-heading h2 {
+    font-size: 35px;
+  }
+
+  .survey-form {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+
+  .full-width,
+  .survey-btn {
+    grid-column: auto;
+  }
+
+}
+  .why-us {
+  padding: 90px 7%;
+  background: #f7fcf9;
+  text-align: center;
+}
+
+.why-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.why-heading h2 {
+  margin-top: 14px;
+  font-size: 44px;
+  color: #073b2a;
+}
+
+.why-heading h2 span {
+  background: linear-gradient(90deg, #16a34a, #087ea4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why-heading p {
+  margin-top: 15px;
+  color: #68766e;
+  line-height: 1.7;
+}
+
+.why-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.why-card {
+  padding: 35px 25px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #dcebe2;
+  box-shadow: 0 12px 30px rgba(20, 60, 40, 0.07);
+  transition: 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px rgba(20, 60, 40, 0.12);
+}
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #e9f9ef;
+  font-size: 34px;
+}
+
+.why-card h3 {
+  color: #073b2a;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.why-card p {
+  color: #68766e;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+@media(max-width:800px) {
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(max-width:550px) {
+
+  .why-us {
+    padding: 70px 5%;
+  }
+
+  .why-heading h2 {
+    font-size: 35px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+  .reviews {
+  padding: 90px 7%;
+  background: white;
+  text-align: center;
+}
+
+.reviews-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.reviews-heading h2 {
+  margin-top: 14px;
+  font-size: 44px;
+  color: #073b2a;
+}
+
+.reviews-heading h2 span {
+  background: linear-gradient(90deg, #16a34a, #087ea4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reviews-heading p {
+  margin-top: 15px;
+  color: #68766e;
+  line-height: 1.7;
+}
+
+.reviews-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.review-card {
+  padding: 32px;
+  background: #f7fcf9;
+  border: 1px solid #dcebe2;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(20,60,40,.06);
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 19px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.review-card > p {
+  color: #52655b;
+  line-height: 1.7;
+  font-size: 14px;
+  min-height: 120px;
+}
+
+.review-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #dcebe2;
+}
+
+.review-avatar {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#16a34a,#087ea4);
+  color: white;
+  font-weight: 800;
+}
+
+.review-person strong {
+  display: block;
+  color: #073b2a;
+}
+
+.review-person small {
+  display: block;
+  margin-top: 3px;
+  color: #7b8b82;
+}
+
+@media(max-width:800px) {
+
+  .reviews {
+    padding: 70px 5%;
+  }
+
+  .reviews-heading h2 {
+    font-size: 35px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card > p {
+    min-height: auto;
+  }
+
+}
+  .contact {
+  padding: 90px 7%;
+  background: linear-gradient(135deg, #073b2a, #075985);
+  color: white;
+}
+
+.contact-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.contact-heading h2 {
+  margin-top: 14px;
+  font-size: 44px;
+}
+
+.contact-heading h2 span {
+  color: #fbbf24;
+}
+
+.contact-heading p {
+  margin-top: 15px;
+  color: #d8eee3;
+  line-height: 1.7;
+}
+
+.contact-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-card {
+  padding: 28px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.12);
+  font-size: 28px;
+}
+
+.contact-card small {
+  color: #a9e6c3;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.contact-card h3 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.contact-card p {
+  margin: 0;
+  color: #cce3d8;
+  font-size: 13px;
+}
+
+.contact-card a,
+.contact-time {
+  grid-column: 2;
+  color: #fbbf24;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width:700px) {
+
+  .contact {
+    padding: 70px 5%;
+  }
+
+  .contact-heading h2 {
+    font-size: 35px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+  .footer {
+  background: #041f17;
+  color: white;
+  padding: 70px 7% 25px;
+}
+
+.footer-main {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 45px;
+}
+
+.footer-brand h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  color: #a9c4b7;
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 300px;
+}
+
+.footer-btn {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 18px;
+  border-radius: 9px;
+  background: #16a34a;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 11px;
+  color: #a9c4b7;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: #fbbf24;
+}
+
+.footer-contact p {
+  margin-bottom: 12px;
+  color: #a9c4b7;
+  font-size: 13px;
+}
+
+.footer-bottom {
+  max-width: 1150px;
+  margin: 55px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #78968a;
+  font-size: 11px;
+}
+
+@media(max-width:850px) {
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(max-width:550px) {
+
+  .footer {
+    padding: 55px 5% 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+
+}
+  /* MOBILE WIDTH FIX */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  max-width: 100%;
+}
+
+.logo {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 150px !important;
+  height: 60px !important;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-visual {
+  max-width: 100%;
+}
+
+.solar-house {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 12px 5%;
+  }
+
+ .logo {
+  width: 180px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 180px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+  .nav-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 55px 5%;
+    width: 100%;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 330px;
+  }
+
+  .solar-house {
+    transform: scale(.75);
+  }
+
+}
+  /* FINAL MOBILE LOGO SIZE */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    min-height: 88px;
+    padding: 8px 12px;
+  }
+
+  .brand-logo {
+    width: 165px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+    flex-shrink: 0;
+  }
+
+  .brand-logo img {
+    width: 165px !important;
+    height: 65px !important;
+    object-fit: contain;
+    display: block;
+    transform: scale(1.25);
+    transform-origin: left center;
+  }
+
+  .nav-btn {
+    padding: 12px 13px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+}
+  /* NEXTGEN LOGO SIZE FIX */
+.brand-logo img {
+  width: 210px !important;
+  height: 85px !important;
+  object-fit: contain;
+  display: block;
+}
+  /* NEXTGEN NAVBAR LOGO ALIGNMENT */
+.navbar {
+  min-height: 100px !important;
+}
+
+.brand-logo {
+  width: 210px !important;
+  height: 85px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: visible !important;
+}
+
+.brand-logo img {
+  width: 210px !important;
+  height: 85px !important;
+  object-fit: contain;
+}
+  .brand-logo img {
+  width: 190px !important;
+  height: 78px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.brand-logo {
+  width: 190px !important;
+  height: 78px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+  /* FINAL LOGO + QUOTE ALIGNMENT */
+.brand-logo {
+  margin-left: 0 !important;
+  padding: 0 !important;
+}
+
+.brand-logo img {
+  margin: 0 !important;
+}
+
+.navbar {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+  /* ===== PREMIUM NAVBAR ALIGNMENT ===== */
+
+.navbar {
+  min-height: 105px !important;
+  height: 105px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 10px 22px !important;
+}
+
+.brand-logo {
+  width: 210px !important;
+  height: 85px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-shrink: 0 !important;
+}
+
+.brand-logo img {
+  width: 210px !important;
+  height: 85px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+.navbar .quote-btn {
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+}
+  /* ===== MOBILE NAVBAR ===== */
+
+@media (max-width: 600px) {
+  .navbar {
+    min-height: 90px !important;
+    height: 90px !important;
+    padding: 6px 12px !important;
+  }
+
+  .brand-logo {
+    width: 170px !important;
+    height: 70px !important;
+  }
+
+  .brand-logo img {
+    width: 170px !important;
+    height: 70px !important;
+  }
+
+  .navbar .quote-btn {
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+    border-radius: 14px !important;
+  }
+}
+  /* ===== MOBILE HERO FIX ===== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding-top: 45px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .hero h1 {
+    font-size: 48px !important;
+    line-height: 1.05 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero p {
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+  }
+
+  .hero .badge {
+    font-size: 16px !important;
+    padding: 14px 20px !important;
+    white-space: nowrap !important;
+  }
+}
+  /* ===== FINAL MOBILE HERO HEADING ===== */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 42px !important;
+    line-height: 1.08 !important;
+    margin-top: 18px !important;
+    margin-bottom: 16px !important;
+  }
+}
+  @media (max-width: 600px) {
+  .hero h1 {
+    font-size: 42px !important;
+    line-height: 1.08 !important;
+    margin-top: 18px !important;
+    margin-bottom: 16px !important;
+  }
+}
+  /* ================================
+   NEXTGEN PROJECT SLIDER
+================================ */
+
+.project-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 20px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #111;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.project-slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.project-slide.active {
+  display: block;
+  animation: projectFade 0.5s ease;
+}
+
+.project-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 35px 30px 28px;
+  color: white;
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,0.88)
+  );
+}
+
+.project-overlay span {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fbbf24;
+  margin-bottom: 7px;
+}
+
+.project-overlay h3 {
+  margin: 0;
+  font-size: 27px;
+}
+
+.project-overlay p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+
+/* ================================
+   ARROW BUTTONS
+================================ */
+
+.project-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.92);
+  color: #111;
+
+  font-size: 25px;
+  line-height: 48px;
+  text-align: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+
+  transition: 0.25s ease;
+}
+
+.project-arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  background: #fbbf24;
+}
+
+.project-prev {
+  left: 18px;
+}
+
+.project-next {
+  right: 18px;
+}
+
+
+/* ================================
+   DOTS
+================================ */
+
+.project-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin: 20px 0 35px;
+}
+
+.project-dot {
+  width: 9px;
+  height: 9px;
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  background: #cbd5e1;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.project-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background: #f59e0b;
+}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+@keyframes projectFade {
+  from {
+    opacity: 0.3;
+    transform: scale(1.02);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .project-slider {
+    margin-top: 28px;
+    border-radius: 18px;
+  }
+
+  .project-slide {
+    aspect-ratio: 4 / 5;
+  }
+
+  .project-slide img {
+    object-fit: cover;
+  }
+
+  .project-overlay {
+    padding: 55px 18px 20px;
+  }
+
+  .project-overlay h3 {
+    font-size: 20px;
+  }
+
+  .project-overlay p {
+    font-size: 12px;
+  }
+
+  .project-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+
+  .project-prev {
+    left: 10px;
+  }
+
+  .project-next {
+    right: 10px;
+  }
+
+}
+  /* =========================================
+   NEXTGEN SOLAR — PREMIUM MOBILE UPGRADE
+========================================= */
+@media (max-width: 768px) {
+  /* MAIN PAGE */
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    width: 100%;
+    overflow: hidden;
+  }
+  /* SECTION HEADINGS */
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  .projects-heading,
+  .calculator-heading,
+  .survey-heading,
+  .why-heading,
+  .reviews-heading,
+  .contact-heading {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .projects-heading h2,
+  .calculator-heading h2,
+  .survey-heading h2,
+  .why-heading h2,
+  .reviews-heading h2,
+  .contact-heading h2 {
+    font-size: 30px;
+    line-height: 1.15;
+  }
+  .projects-heading p,
+  .calculator-heading p,
+  .survey-heading p,
+  .why-heading p,
+  .reviews-heading p,
+  .contact-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  /* PROJECTS */
+  .project-slider {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* CALCULATOR */
+  .calculator-box {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .calculator-input input,
+  .calculator-input select {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 52px;
+    font-size: 16px;
+  }
+  .calculate-btn {
+    width: 100%;
+    min-height: 52px;
+    font-size: 15px;
+  }
+  /* SURVEY FORM */
+  .survey-form {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 52px;
+    font-size: 16px;
+  }
+  .survey-btn {
+    width: 100%;
+    min-height: 54px;
+    font-size: 15px;
+  }
+  /* WHY US */
+  .why-grid {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .why-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+  /* REVIEWS */
+  .reviews-grid {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .review-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+  /* CONTACT */
+  .contact-grid {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .contact-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+  .contact-card a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+  /* FOOTER */
+  .footer-main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer-bottom {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+}
+  /* =========================================
+   NEXTGEN SOLAR — PREMIUM HEADER
+========================================= */
+header,
+.navbar,
+nav {
+  position: relative;
+  z-index: 1000;
+}
+/* LOGO IMAGE */
+header img,
+.navbar img,
+nav img {
+  width: 150px;
+  height: auto;
+  max-height: 70px;
+  object-fit: contain;
+}
+/* LOGO + BRAND AREA */
+.logo,
+.nav-logo,
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* NAVIGATION LINKS */
+nav a,
+.navbar a {
+  transition: 0.25s ease;
+}
+nav a:hover,
+.navbar a:hover {
+  transform: translateY(-1px);
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  header,
+  .navbar,
+  nav {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  header img,
+  .navbar img,
+  nav img {
+    width: 135px;
+    max-height: 62px;
+  }
+}
+  /* =========================================
+   STEP 3 — PREMIUM HERO SECTION
+========================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+/* DARK PREMIUM OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(250, 180, 30, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.20),
+      rgba(0, 0, 0, 0.04)
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+/* HERO HEADING */
+.hero h1 {
+  letter-spacing: -1px;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.hero h1 span {
+  display: inline-block;
+}
+/* HERO PARAGRAPH */
+.hero p {
+  line-height: 1.7;
+  max-width: 650px;
+}
+/* BUTTONS */
+.hero .primary-btn,
+.hero .secondary-btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.hero .primary-btn:hover,
+.hero .secondary-btn:hover {
+  transform: translateY(-3px);
+}
+/* PRIMARY BUTTON */
+.hero .primary-btn {
+  box-shadow:
+    0 10px 25px rgba(245, 158, 11, 0.25);
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 620px;
+  }
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 10vw, 54px);
+    line-height: 1.05;
+  }
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .hero .primary-btn,
+  .hero .secondary-btn {
+    width: 100%;
+    min-height: 52px;
+    font-size: 15px;
+  }
+}
+/* SMALL PHONES */
+@media (max-width: 380px) {
+  .hero {
+    min-height: 580px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+  /* =========================================
+   STEP 4 — PREMIUM SOLAR CALCULATOR
+========================================= */
+.calculator {
+  position: relative;
+  overflow: hidden;
+}
+.calculator-box {
+  position: relative;
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08);
+}
+/* INPUT AREA */
+.calculator-input label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-wrap span {
+  position: absolute;
+  left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 2;
+}
+.input-wrap input {
+  padding-left: 42px !important;
+}
+/* INPUTS */
+.calculator-input input,
+.calculator-input select {
+  min-height: 54px;
+  border-radius: 12px;
+  border: 1px solid #dce5df;
+  outline: none;
+  transition: 0.25s ease;
+}
+.calculator-input input:focus,
+.calculator-input select:focus {
+  border-color: #f59e0b;
+  box-shadow:
+    0 0 0 4px rgba(245, 158, 11, 0.10);
+}
+/* CALCULATE BUTTON */
+.calculate-btn {
+  min-height: 54px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.25s ease;
+  box-shadow:
+    0 10px 25px rgba(245, 158, 11, 0.20);
+}
+.calculate-btn:hover {
+  transform: translateY(-2px);
+}
+.calculate-btn:active {
+  transform: scale(0.98);
+}
+/* RESULT CARD */
+.calculator-result {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.07);
+}
+/* RESULT ICON */
+.result-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.12);
+  font-size: 28px;
+}
+/* SOLAR SIZE */
+#solarSize {
+  display: block;
+  margin: 8px 0;
+  font-size: 42px;
+  line-height: 1;
+}
+/* RESULT DETAILS */
+.result-details {
+  margin-top: 25px;
+}
+.result-details div {
+  border-radius: 12px;
+  padding: 14px;
+  transition: 0.2s ease;
+}
+.result-details div:hover {
+  transform: translateY(-2px);
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .calculator-box {
+    gap: 20px;
+  }
+  .calculator-result {
+    margin-top: 5px;
+  }
+  #solarSize {
+    font-size: 38px;
+  }
+  .result-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+  /* =========================================
+   STEP 5 — PREMIUM FREE SITE SURVEY
+========================================= */
+.survey {
+  position: relative;
+  overflow: hidden;
+}
+/* SURVEY FORM */
+.survey-form {
+  position: relative;
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08);
+}
+/* FORM GROUP */
+.form-group {
+  position: relative;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+/* INPUTS */
+.form-group input,
+.form-group select {
+  width: 100%;
+  min-height: 54px;
+  box-sizing: border-box;
+  border: 1px solid #dce5df;
+  border-radius: 12px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+/* INPUT FOCUS */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #f59e0b;
+  box-shadow:
+    0 0 0 4px rgba(245, 158, 11, 0.10);
+}
+/* PLACEHOLDER */
+.form-group input::placeholder {
+  opacity: 0.55;
+}
+/* SURVEY BUTTON */
+.survey-btn {
+  min-height: 56px;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+    
+  box-shadow:
+    0 12px 30px rgba(245, 158, 11, 0.22);
+}
+.survey-btn:hover {
+  transform: translateY(-3px);
+}
+.survey-btn:active {
+  transform: scale(0.98);
+}
+/* SUCCESS MESSAGE */
+.survey-form h2 {
+  font-size: 28px;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .survey-form {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  .form-group input,
+  .form-group select {
+    min-height: 54px;
+    font-size: 16px;
+  }
+  .survey-btn {
+    width: 100%;
+    min-height: 56px;
+  }
+}
+  /* =========================================
+   STEP 6 — PREMIUM CUSTOMER REVIEWS
+========================================= */
+.reviews {
+  position: relative;
+  overflow: hidden;
+}
+/* REVIEW GRID */
+.review-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(245, 158, 11, 0.14);
+  border-radius: 20px;
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.10);
+}
+/* STARS */
+.stars {
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+/* REVIEW TEXT */
+.review-card p {
+  line-height: 1.7;
+  font-size: 14px;
+}
+/* CUSTOMER AREA */
+.review-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+/* AVATAR */
+.review-avatar {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 17px;
+  font-weight: 800;
+  background: rgba(245, 158, 11, 0.12);
+}
+/* CUSTOMER NAME */
+.review-person strong {
+  display: block;
+  font-size: 15px;
+}
+.review-person small {
+  display: block;
+  margin-top: 3px;
+  opacity: 0.65;
+}
+/* MOBILE SWIPE */
+@media (max-width: 768px) {
+  .reviews-grid {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 2px 18px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .reviews-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .review-card {
+    flex: 0 0 88%;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    min-height: 230px;
+  }
+}
+/* SMALL PHONES */
+@media (max-width: 380px) {
+  .review-card {
+    flex-basis: 92%;
+  }
+}
+  /* =========================================
+   STEP 7 — PREMIUM CONTACT SECTION
+========================================= */
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+.contact-grid {
+  position: relative;
+}
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(245, 158, 11, 0.14);
+  border-radius: 20px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.09);
+}
+.contact-icon {
+  transition: transform 0.25s ease;
+}
+.contact-card:hover .contact-icon {
+  transform: scale(1.08);
+}
+.contact-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.contact-card a:hover {
+  transform: translateY(-2px);
+}
+.contact-time {
+  font-weight: 700;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-grid {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .contact-card {
+    padding: 20px;
+  }
+  .contact-card a {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+  }
+}
+  /* =========================================
+   STEP 8 — PREMIUM FOOTER
+========================================= */
+.footer {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(245, 158, 11, 0.15);
+}
+/* FOOTER BRAND */
+.footer-brand h2 {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.footer-brand p {
+  line-height: 1.7;
+}
+/* FOOTER BUTTON */
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 11px;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.footer-btn:hover {
+  transform: translateY(-3px);
+}
+/* FOOTER LINKS */
+.footer-links a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+.footer-links a:hover {
+  transform: translateX(4px);
+  opacity: 0.75;
+}
+/* FOOTER CONTACT */
+.footer-contact p {
+  line-height: 1.6;
+}
+/* FOOTER BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-main {
+    padding: 35px 20px 25px;
+  }
+  .footer-brand h2 {
+    font-size: 24px;
+  }
+  .footer-brand p {
+    font-size: 14px;
+  }
+  .footer-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .footer-links a {
+    padding: 4px 0;
+  }
+  .footer-bottom {
+    padding: 18px 20px;
+  }
+  .footer-bottom p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+  /* =========================================
+   STEP 9 — FLOATING CONTACT BUTTONS
+========================================= */
+.floating-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* COMMON BUTTON */
+.floating-contact a {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 23px;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.20);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+/* CALL */
+.floating-call {
+  background: #111827;
+}
+/* WHATSAPP */
+.floating-whatsapp {
+  background: #25D366;
+}
+/* HOVER */
+.floating-contact a:hover {
+  transform: scale(1.10);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25);
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .floating-contact {
+    right: 14px;
+    bottom: 16px;
+    gap: 10px;
+  }
+  .floating-contact a {
+    width: 52px;
+    height: 52px;
+    font-size: 21px;
+  }
+}
+  /* =========================================
+   STEP 10 — SMOOTH NAVIGATION & ANIMATIONS
+========================================= */
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+/* BUTTONS */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+/* GENERAL BUTTON PRESS EFFECT */
+button:active,
+a:active {
+  transform: scale(0.97);
+}
+/* SECTION ENTRY */
+section {
+  scroll-margin-top: 80px;
+}
+/* CARD HOVER */
+.project-card,
+.why-card,
+.review-card,
+.contact-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+/* PROJECT CARD */
+.project-card:hover {
+  transform: translateY(-5px);
+}
+/* WHY CARD */
+.why-card:hover {
+  transform: translateY(-5px);
+}
+/* CONTACT CARD */
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+/* IMAGE ZOOM */
+.project-image {
+  overflow: hidden;
+}
+.project-image img {
+  transition: transform 0.5s ease;
+}
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+/* LINKS */
+a {
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+/* INPUT */
+input,
+select,
+button {
+  -webkit-appearance: none;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+  /* MOBILE PARAGRAPHS */
+  p {
+    line-height: 1.7;
+  }
+  /* REMOVE HOVER LIFT ON TOUCH DEVICES */
+  .project-card:hover,
+  .why-card:hover,
+  .review-card:hover,
+  .contact-card:hover {
+    transform: none;
+  }
+}
+  /* =========================================
+   STEP 11 — ANIMATED SOLAR HERO
+========================================= */
+.animated-solar {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* =========================
+   SUN
+========================= */
+.solar-sun {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  animation: sunFloat 4s ease-in-out infinite;
+}
+.sun-core {
+  width: 82px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 58px;
+  background: radial-gradient(
+    circle,
+    #fff7b2 0%,
+    #ffd84d 45%,
+    #f59e0b 100%
+  );
+  box-shadow:
+    0 0 25px rgba(255, 193, 7, 0.7),
+    0 0 70px rgba(255, 193, 7, 0.45);
+  animation: sunGlow 2.5s ease-in-out infinite;
+}
+/* SUN RAYS */
+.sun-ray {
+  position: absolute;
+  width: 4px;
+  height: 22px;
+  border-radius: 10px;
+  background: #f59e0b;
+  opacity: 0.75;
+}
+.ray-1 {
+  top: -4px;
+  left: 50%;
+}
+.ray-2 {
+  top: 8px;
+  right: 10px;
+  transform: rotate(45deg);
+}
+.ray-3 {
+  right: -5px;
+  top: 50%;
+  transform: rotate(90deg);
+}
+.ray-4 {
+  right: 10px;
+  bottom: 8px;
+  transform: rotate(135deg);
+}
+.ray-5 {
+  bottom: -4px;
+  left: 50%;
+  transform: rotate(180deg);
+}
+.ray-6 {
+  bottom: 8px;
+  left: 10px;
+  transform: rotate(225deg);
+}
+.ray-7 {
+  left: -5px;
+  top: 50%;
+  transform: rotate(270deg);
+}
+.ray-8 {
+  top: 8px;
+  left: 10px;
+  transform: rotate(315deg);
+}
+/* =========================
+   SOLAR PANEL
+========================= */
+.floating-panel {
+  position: relative;
+  width: 330px;
+  height: 220px;
+  transform:
+    perspective(700px)
+    rotateX(48deg)
+    rotateZ(-8deg);
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      135deg,
+      #123e66,
+      #075985,
+      #0e7490
+    );
+  border: 4px solid #334155;
+  box-shadow:
+    0 35px 45px rgba(0, 0, 0, 0.28),
+    0 0 35px rgba(14, 116, 144, 0.25);
+  overflow: hidden;
+  animation: panelFloat 4s ease-in-out infinite;
+}
+/* PANEL CELLS */
+.panel-grid {
+  position: absolute;
+  inset: 8px;
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  grid-template-rows:
+    repeat(3, 1fr);
+  gap: 4px;
+}
+.panel-grid span {
+  border: 1px solid rgba(125, 211, 252, 0.45);
+  background:
+    linear-gradient(
+      135deg,
+      #164e63,
+      #075985
+    );
+}
+/* LIGHT SWEEP */
+.panel-light {
+  position: absolute;
+  top: -20%;
+  left: -80%;
+  width: 55%;
+  height: 150%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.65),
+    transparent
+  );
+  animation: lightSweep 3.5s ease-in-out infinite;
+}
+/* =========================
+   ENERGY PARTICLES
+========================= */
+.energy-particle {
+  position: absolute;
+  font-size: 25px;
+  color: #f59e0b;
+  filter:
+    drop-shadow(
+      0 0 8px rgba(245,158,11,0.8)
+    );
+  animation:
+    energyFloat 3s ease-in-out infinite;
+}
+.particle-1 {
+  left: 20%;
+  top: 42%;
+}
+.particle-2 {
+  right: 17%;
+  top: 60%;
+  animation-delay: 0.8s;
+}
+.particle-3 {
+  left: 32%;
+  bottom: 18%;
+  animation-delay: 1.5s;
+}
+/* =========================
+   ENERGY LINE
+========================= */
+.energy-line {
+  position: absolute;
+  width: 170px;
+  height: 3px;
+  left: 18%;
+  bottom: 27%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(14,116,144,0.18);
+}
+.energy-line span {
+  position: absolute;
+  left: -50px;
+  width: 50px;
+  height: 3px;
+  background: #22c55e;
+  box-shadow:
+    0 0 10px #22c55e;
+  animation: energyMove 2s linear infinite;
+}
+/* =========================
+   SOLAR BADGE
+========================= */
+.solar-badge {
+  position: absolute;
+  left: 25px;
+  bottom: 45px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.92);
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+.solar-badge strong {
+  font-size: 14px;
+  color: #111827;
+}
+.solar-badge small {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #64748b;
+}
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes sunGlow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+@keyframes sunFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes panelFloat {
+  0%, 100% {
+    transform:
+      perspective(700px)
+      rotateX(48deg)
+      rotateZ(-8deg)
+      translateY(0);
+  }
+  50% {
+    transform:
+      perspective(700px)
+      rotateX(48deg)
+      rotateZ(-8deg)
+      translateY(-12px);
+  }
+}
+@keyframes lightSweep {
+  0% {
+    left: -80%;
+  }
+  60%, 100% {
+    left: 130%;
+  }
+}
+@keyframes energyFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-18px) scale(1.15);
+    opacity: 1;
+  }
+}
+@keyframes energyMove {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 180px;
+  }
+}
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .animated-solar {
+    min-height: 380px;
+  }
+  .floating-panel {
+    width: 260px;
+    height: 175px;
+  }
+  .solar-sun {
+    top: 15px;
+    right: 20px;
+    transform: scale(0.8);
+  }
+  .solar-badge {
+    left: 10px;
+    bottom: 25px;
+  }
+  .energy-line {
+    width: 120px;
+    left: 15%;
+    bottom: 25%;
+  }
+}
+  /* HERO REAL VIDEO */
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.video-glow {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background: rgba(255, 190, 0, 0.18);
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 1;
+}
+  /* =========================================
+   STEP 11 — PREMIUM HERO VIDEO
+========================================= */
+.hero-video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #071b2b;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.22),
+    0 0 45px rgba(245, 158, 11, 0.12);
+  transform: translateZ(0);
+}
+/* VIDEO */
+.hero-video video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 28px;
+  z-index: 1;
+  transform: scale(1.01);
+  transition: transform 0.6s ease;
+}
+/* SUBTLE HOVER ZOOM */
+.hero-video:hover video {
+  transform: scale(1.04);
+}
+/* DARK PREMIUM OVERLAY */
+.hero-video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.04) 55%,
+      rgba(0, 0, 0, 0.20) 100%
+    );
+}
+/* GOLDEN GLOW */
+.video-glow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -80px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.22);
+  filter: blur(70px);
+  z-index: 0;
+  pointer-events: none;
+  animation: heroGlow 5s ease-in-out infinite;
+}
+/* MOVING LIGHT REFLECTION */
+.hero-video::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -80%;
+  width: 45%;
+  height: 300%;
+  z-index: 3;
+  pointer-events: none;
+  transform: rotate(25deg);
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.08),
+      transparent
+    );
+  animation: videoReflection 6s ease-in-out infinite;
+}
+/* GLOW ANIMATION */
+@keyframes heroGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+}
+/* REFLECTION ANIMATION */
+@keyframes videoReflection {
+  0% {
+    left: -80%;
+  }
+  45%, 100% {
+    left: 150%;
+  }
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-video {
+    min-height: 320px;
+    border-radius: 22px;
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.18);
+  }
+  .hero-video video {
+    border-radius: 22px;
+  }
+  .video-glow {
+    width: 180px;
+    height: 180px;
+  }
+  /* Disable hover zoom on mobile */
+  .hero-video:hover video {
+    transform: scale(1.01);
+  }
+}
+</style>
+
+<div class="website">
+
+ <!-- NAVBAR -->
+<nav class="navbar">
+
+  <div class="brand-logo">
+    <img
+      src="https://i.ibb.co/Mx1JtmdX/C58-ABD1-F-059-A-47-F4-8567-FAF05-F07-C65-A.png"
+      alt="NextGen Solar Energy Logo"
+    >
+  </div>
+
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <button class="nav-btn">Get Free Quote</button>
+
+</nav>
+<div class="hero-visual hero-video">
+
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source
+      src="https://www.image2url.com/r2/default/videos/1787380254773-dfad71a1-c316-429b-8c8b-d29ebbef1da8.mp4"
+      type="video/mp4"
+    >
+  </video>
+
+  <div class="video-glow"></div>
+
+</div>
+  <!-- WHY CHOOSE US -->
+<section class="why-us" id="why-us">
+
+  <div class="why-heading">
+    <span class="section-label">WHY NEXTGEN SOLAR?</span>
+
+    <h2>
+      Why Choose
+      <span>NextGen Solar?</span>
+    </h2>
+
+    <p>
+      Smart solar solutions, professional installation
+      and reliable support — all in one place.
+    </p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="why-icon">☀️</div>
+      <h3>Premium Solar Systems</h3>
+      <p>
+        High-quality solar systems designed for
+        reliable long-term performance.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Maximum Savings</h3>
+      <p>
+        Reduce your electricity bills and get more
+        value from every unit of solar energy.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">🛠️</div>
+      <h3>Professional Installation</h3>
+      <p>
+        Experienced installation team ensuring
+        proper setup and smooth execution.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">📞</div>
+      <h3>After-Sales Support</h3>
+      <p>
+        We're here to support you even after your
+        solar system has been installed.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+  </section>
+  
+
+
+  <!-- NEXT SECTION -->
+  <section class="intro">
+
+    <div>
+      <span class="section-label">WHY NEXTGEN SOLAR</span>
+
+      <h2>
+        Smart Solar Solutions<br>
+        For A <span>Brighter Future</span>
+      </h2>
+    </div>
+
+    <p>
+      We provide modern and reliable solar energy solutions
+      designed to reduce electricity costs and help you
+      move towards a cleaner and greener future.
+    </p>
+<!-- SOLAR SOLUTIONS -->
+
+<section class="solutions" id="solutions">
+
+  <div class="solutions-heading">
+    <span class="section-label">OUR SOLAR SOLUTIONS</span>
+
+    <h2>
+      Solar Power For<br>
+      <span>Every Need</span>
+    </h2>
+
+    <p>
+      From homes to large businesses, we provide reliable
+      solar energy systems designed to save money and
+      deliver long-term performance.
+    </p>
+  </div>
+
+
+  <div class="solution-cards">
+
+    <!-- RESIDENTIAL -->
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        🏠
+      </div>
+
+      <h3>Residential Solar</h3>
+
+      <p>
+        Reduce your home's electricity bills with
+        efficient rooftop solar systems.
+      </p>
+
+      <ul>
+        <li>✓ Rooftop Solar</li>
+        <li>✓ On-Grid Systems</li>
+        <li>✓ Government Subsidy</li>
+        <li>✓ Free Site Survey</li>
+      </ul>
+
+      <button class="solution-btn">
+        Know More →
+      </button>
+
+    </div>
+
+
+    <!-- COMMERCIAL -->
+
+    <div class="solution-card featured">
+
+      <div class="popular">
+        MOST POPULAR
+      </div>
+
+      <div class="solution-icon">
+        🏢
+      </div>
+
+      <h3>Commercial Solar</h3>
+
+      <p>
+        Smart solar solutions for shops, offices,
+        schools, hospitals and businesses.
+      </p>
+
+      <ul>
+        <li>✓ 10kW – 100kW+ Systems</li>
+        <li>✓ High-Efficiency Panels</li>
+        <li>✓ Electricity Bill Savings</li>
+        <li>✓ Complete Installation</li>
+      </ul>
+
+      <button class="solution-btn">
+        Know More →
+      </button>
+
+    </div>
+
+
+    <!-- INDUSTRIAL -->
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        🏭
+      </div>
+
+      <h3>Industrial Solar</h3>
+
+      <p>
+        High-capacity solar power systems for
+        factories and large industrial projects.
+      </p>
+
+      <ul>
+        <li>✓ 100kW – 1MW+ Projects</li>
+        <li>✓ Customized Design</li>
+        <li>✓ Engineering & Installation</li>
+        <li>✓ Long-Term Support</li>
+      </ul>
+
+      <button class="solution-btn">
+        Know More →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+    <!-- SOLAR PACKAGES -->
+
+<section class="packages" id="packages">
+
+  <div class="packages-heading">
+    <span class="section-label">SOLAR PACKAGES</span>
+
+    <h2>
+      Choose The Right<br>
+      <span>Solar System</span>
+    </h2>
+
+    <p>
+      Choose a solar system according to your home's
+      electricity consumption or business requirements.
+    </p>
+  </div>
+
+
+  <div class="package-grid">
+
+    <!-- 1 KW -->
+
+    <div class="package-card">
+
+      <div class="package-top">
+        <span>STARTER</span>
+        <strong>1 kW</strong>
+      </div>
+
+      <h3>1 kW Solar System</h3>
+
+      <p class="package-for">
+        Ideal for small homes
+      </p>
+
+      <div class="package-info">
+        <div>
+          <span>System</span>
+          <b>On-Grid</b>
+        </div>
+
+        <div>
+          <span>Best For</span>
+          <b>Small Home</b>
+        </div>
+      </div>
+
+      <button class="package-btn">
+        Get Quote →
+      </button>
+
+    </div>
+
+
+    <!-- 2 KW -->
+
+    <div class="package-card">
+
+      <div class="package-top">
+        <span>HOME</span>
+        <strong>2 kW</strong>
+      </div>
+
+      <h3>2 kW Solar System</h3>
+
+      <p class="package-for">
+        Ideal for small families
+      </p>
+
+      <div class="package-info">
+        <div>
+          <span>System</span>
+          <b>On-Grid</b>
+        </div>
+
+        <div>
+          <span>Best For</span>
+          <b>Family Home</b>
+        </div>
+      </div>
+
+      <button class="package-btn">
+        Get Quote →
+      </button>
+
+    </div>
+
+
+    <!-- 3 KW -->
+
+    <div class="package-card popular-package">
+
+      <div class="package-badge">
+        MOST POPULAR
+      </div>
+
+      <div class="package-top">
+        <span>POPULAR</span>
+        <strong>3 kW</strong>
+      </div>
+
+      <h3>3 kW Solar System</h3>
+
+      <p class="package-for">
+        Great choice for medium homes
+      </p>
+
+      <div class="package-info">
+        <div>
+          <span>System</span>
+          <b>On-Grid</b>
+        </div>
+
+        <div>
+          <span>Best For</span>
+          <b>Medium Home</b>
+        </div>
+      </div>
+
+      <button class="package-btn">
+        Get Quote →
+      </button>
+
+    </div>
+
+
+    <!-- 5 KW -->
+
+    <div class="package-card">
+
+      <div class="package-top">
+        <span>PREMIUM</span>
+        <strong>5 kW</strong>
+      </div>
+
+      <h3>5 kW Solar System</h3>
+
+      <p class="package-for">
+        For larger homes & high usage
+      </p>
+
+      <div class="package-info">
+        <div>
+          <span>System</span>
+          <b>On-Grid</b>
+        </div>
+
+        <div>
+          <span>Best For</span>
+          <b>Large Home</b>
+        </div>
+      </div>
+
+      <button class="package-btn">
+        Get Quote →
+      </button>
+
+    </div>
+
+
+    <!-- 10 KW -->
+
+    <div class="package-card">
+
+      <div class="package-top">
+        <span>BUSINESS</span>
+        <strong>10 kW+</strong>
+      </div>
+
+      <h3>10 kW+ Solar System</h3>
+
+      <p class="package-for">
+        For shops & commercial buildings
+      </p>
+
+      <div class="package-info">
+        <div>
+          <span>System</span>
+          <b>On-Grid</b>
+        </div>
+
+        <div>
+          <span>Best For</span>
+          <b>Business</b>
+        </div>
+      </div>
+
+      <button class="package-btn">
+        Get Quote →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+    <!-- PM SURYA GHAR SECTION -->
+
+<section class="subsidy" id="subsidy">
+
+  <div class="subsidy-content">
+
+    <span class="section-label">PM SURYA GHAR YOJANA</span>
+
+    <h2>
+      Get Up To
+      <span>₹78,000</span>
+      Government Subsidy
+    </h2>
+
+    <p>
+      Install rooftop solar for your home and take advantage
+      of the PM Surya Ghar: Muft Bijli Yojana.
+    </p>
+
+    <div class="subsidy-points">
+      <div>✓ Residential Rooftop Solar</div>
+      <div>✓ Government Subsidy Support</div>
+      <div>✓ Professional Installation</div>
+      <div>✓ Free Site Survey</div>
+    </div>
+
+    <button class="subsidy-btn">
+      Check Your Eligibility →
+    </button>
+
+  </div>
+
+
+  <div class="subsidy-card">
+
+    <div class="subsidy-icon">
+      ☀️
+    </div>
+
+    <small>MAXIMUM SUBSIDY</small>
+
+    <strong>₹78,000</strong>
+
+    <p>
+      For eligible residential rooftop
+      solar systems under the scheme.
+    </p>
+
+    <div class="subsidy-note">
+      *Eligibility and subsidy amount are subject to
+      applicable government guidelines.
+    </div>
+
+  </div>
+
+<!-- OUR SOLAR PROJECTS -->
+
+<section class="projects" id="projects">
+
+  <div class="projects-heading">
+    <span class="section-label">OUR SOLAR PROJECTS</span>
+
+    <h2>
+      Powering Homes & Businesses<br>
+      With <span>Clean Energy</span>
+    </h2>
+
+    <p>
+      A glimpse of solar installations completed by
+      NextGen Solar Energy.
+    </p>
+  </div>
+
+
+  <div class="project-grid">
+
+
+  <!-- ================= PROJECTS SECTION ================= -->
+
+<section class="projects" id="projects">
+
+  <div class="projects-heading">
+    <span class="section-label">OUR PROJECTS</span>
+
+    <h2>
+      Powering Homes &
+      <span>Businesses</span>
+    </h2>
+
+    <p>
+      Take a look at some of the solar installations
+      completed by NextGen Solar Energy.
+    </p>
+  </div>
+
+
+  <div class="project-grid">
+
+
+    <!-- PROJECT 1 -->
+
+    <div class="project-card">
+
+      <div class="project-image">
+        <img
+          src="https://i.ibb.co/RTZq3Bsy/IMG-0411.jpg"
+          alt="NextGen Solar Residential Installation"
+        >
+
+        <div class="project-badge">
+          RESIDENTIAL
+        </div>
+      </div>
+
+      <div class="project-content">
+
+        <div>
+          <span class="project-type">RESIDENTIAL SOLAR</span>
+
+          <h3>
+            Rooftop Solar Installation
+          </h3>
+
+          <p>
+            Clean energy solution for a residential property.
+          </p>
+        </div>
+
+        <span class="project-capacity">
+          3 kW
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PROJECT 2 -->
+
+    <div class="project-card">
+
+      <div class="project-image">
+        <img
+          src="https://i.ibb.co/pBq4Bkhb/IMG-3602.jpg"
+          alt="NextGen Solar Installation"
+        >
+
+        <div class="project-badge">
+          RESIDENTIAL
+        </div>
+      </div>
+
+      <div class="project-content">
+
+        <div>
+          <span class="project-type">ROOFTOP SOLAR</span>
+
+          <h3>
+            On-Grid Solar System
+          </h3>
+
+          <p>
+            Efficient rooftop solar system designed for
+            long-term savings.
+          </p>
+        </div>
+
+        <span class="project-capacity">
+          5 kW
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PROJECT 3 -->
+
+    <div class="project-card">
+
+      <div class="project-image">
+        <img
+          src="https://i.ibb.co/8R5W1FX/IMG-3517.jpg"
+          alt="NextGen Solar Rooftop Project"
+        >
+
+        <div class="project-badge">
+          ROOFTOP
+        </div>
+      </div>
+
+      <div class="project-content">
+
+        <div>
+          <span class="project-type">SOLAR INSTALLATION</span>
+
+          <h3>
+            Residential Solar Project
+          </h3>
+
+          <p>
+            Reliable solar power solution installed by
+            the NextGen Solar team.
+          </p>
+        </div>
+
+        <span class="project-capacity">
+          3 kW
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PROJECT 4 -->
+
+    <div class="project-card">
+
+      <div class="project-image">
+        <img
+          src="https://i.ibb.co/kVf01vKw/521a3c6b-2cdc-46fc-a9b4-94e70e897811.jpg"
+          alt="NextGen Solar Energy Project"
+        >
+
+        <div class="project-badge">
+          SOLAR
+        </div>
+      </div>
+
+      <div class="project-content">
+
+        <div>
+          <span class="project-type">SOLAR PROJECT</span>
+
+          <h3>
+            Rooftop Solar Installation
+          </h3>
+
+          <p>
+            Professional solar installation with a focus
+            on quality and performance.
+          </p>
+        </div>
+
+        <span class="project-capacity">
+          5 kW
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PROJECT 5 -->
+
+    <div class="project-card">
+
+      <div class="project-image">
+        <img
+          src="https://i.ibb.co/5hKqTgY2/IMG-6624.jpg"
+          alt="NextGen Solar Energy Installation"
+        >
+
+        <div class="project-badge">
+          RESIDENTIAL
+        </div>
+      </div>
+
+      <div class="project-content">
+
+        <div>
+          <span class="project-type">RESIDENTIAL SOLAR</span>
+
+          <h3>
+            Clean Energy Installation
+          </h3>
+
+          <p>
+            Helping customers reduce electricity costs
+            with solar energy.
+          </p>
+        </div>
+
+        <span class="project-capacity">
+          5 kW
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- PROJECT STATS -->
+
+  <div class="project-stats">
+
+    <div class="stat-box">
+      <strong>70+</strong>
+      <span>Solar Installations</span>
+    </div>
+
+    <div class="stat-box">
+      <strong>3+</strong>
+      <span>Years Experience</span>
+    </div>
+
+    <div class="stat-box">
+      <strong>100%</strong>
+      <span>Customer Support</span>
+    </div>
+
+    <div class="stat-box">
+      <strong>25+</strong>
+      <span>Years Panel Life*</span>
+    </div>
+
+  </div>
+
+</section>
+<section class="calculator" id="calculator">
+
+  <div class="calculator-heading">
+    <span class="section-label">SOLAR CALCULATOR</span>
+
+    <h2>
+      Calculate Your
+      <span>Solar Savings</span>
+    </h2>
+
+    <p>
+      Enter your monthly electricity bill and get an
+      estimated solar requirement and savings.
+    </p>
+  </div>
+
+  <div class="calculator-box">
+
+    <div class="calculator-input">
+
+      <label>Monthly Electricity Bill</label>
+
+      <div class="input-wrap">
+        <span>₹</span>
+        <input
+          type="number"
+          id="electricityBill"
+          placeholder="Example: 3000"
+        >
+      </div>
+
+      <label>Property Type</label>
+
+      <select id="propertyType">
+        <option value="home">Home</option>
+        <option value="shop">Shop / Business</option>
+        <option value="office">Office</option>
+        <option value="school">School / Institution</option>
+        <option value="other">Other</option>
+      </select>
+
+      <button class="calculate-btn" id="calculateBtn">
+        Calculate My Savings →
+      </button>
+
+    </div>
+
+
+    <div class="calculator-result" id="calculatorResult">
+
+      <div class="result-icon">☀️</div>
+
+      <span>ESTIMATED SOLAR REQUIREMENT</span>
+
+      <strong id="solarSize">— kW</strong>
+
+      <p>
+        Enter your electricity bill to calculate
+        your estimated solar requirement.
+      </p>
+
+      <div class="result-details">
+
+        <div>
+          <small>Estimated Savings</small>
+          <b id="savingAmount">₹ —</b>
+        </div>
+
+        <div>
+          <small>Solar Type</small>
+          <b>On-Grid</b>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  
+</section>
+    <script>
+
+document.getElementById("calculateBtn").addEventListener("click", function () {
+
+  let bill = Number(document.getElementById("electricityBill").value);
+
+  if (bill <= 0) {
+    alert("Pehle monthly electricity bill enter karo.");
+    return;
+  }
+
+  let size;
+
+  if (bill <= 1500) {
+    size = 1;
+  } else if (bill <= 3000) {
+    size = 2;
+  } else if (bill <= 4500) {
+    size = 3;
+  } else if (bill <= 7500) {
+    size = 5;
+  } else {
+    size = 10;
+  }
+
+  let saving = Math.round(bill * 0.75);
+
+  document.getElementById("solarSize").textContent = size + " kW";
+
+  document.getElementById("savingAmount").textContent =
+    "₹ " + saving.toLocaleString("en-IN");
+
+});
+const topSurveyButton = document.querySelector(".primary-btn");
+
+if (topSurveyButton) {
+  topSurveyButton.addEventListener("click", function () {
+
+    const surveySection = document.querySelector("#survey");
+
+    if (surveySection) {
+      surveySection.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+  });
+}
+document.getElementById("surveySubmit").onclick = function () {
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const location = document.getElementById("customerLocation").value.trim();
+  const property = document.getElementById("customerProperty").value;
+  const bill = document.getElementById("customerBill").value.trim();
+
+  if (!name || !phone || !location || !property || !bill) {
+    alert("Please fill all the details.");
+    return;
+  }
+
+  alert("Thank you " + name + "! Your request has been received.");
+
+};
+</script>
+<script>
+
+window.onload = function () {
+
+  const button = document.getElementById("surveySubmit");
+
+  if (!button) return;
+
+  button.onclick = function () {
+
+    const name =
+      document.getElementById("customerName").value.trim();
+
+    const phone =
+      document.getElementById("customerPhone").value.trim();
+
+    const location =
+      document.getElementById("customerLocation").value.trim();
+
+    const property =
+      document.getElementById("customerProperty").value;
+
+    const bill =
+      document.getElementById("customerBill").value.trim();
+
+
+    // CHECK FORM
+
+    if (!name || !phone || !location || !property || !bill) {
+
+      alert("Please fill all the details.");
+
+      return;
+
+    }
+
+
+    // CUSTOMER SUCCESS MESSAGE
+
+    document.querySelector(".survey-form").innerHTML = `
+
+      <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:45px 20px;
+      ">
+
+        <div style="font-size:55px;">✅</div>
+
+        <h2 style="
+          margin-top:15px;
+          color:#16a34a;
+        ">
+          Request Received!
+        </h2>
+
+        <p style="
+          margin-top:12px;
+          color:#68766e;
+          line-height:1.7;
+        ">
+          Thank you, ${name}!<br>
+          Our NextGen Solar team will contact you shortly.
+        </p>
+
+      </div>
+
+    `;
+
+
+    // WHATSAPP NOTIFICATION
+
+    const whatsappNumber = "919468784992";
+
+    const message =
+`☀️ NEW NEXTGEN SOLAR LEAD
+
+Name: ${name}
+Mobile: ${phone}
+Location: ${location}
+Property: ${property}
+Monthly Electricity Bill: ₹${bill}
+
+FREE SITE SURVEY REQUEST`;
+
+    const whatsappURL =
+      "https://wa.me/" +
+      whatsappNumber +
+      "?text=" +
+      encodeURIComponent(message);
+
+
+    // OPEN WHATSAPP
+
+    setTimeout(function () {
+
+      window.open(whatsappURL, "_blank");
+
+    }, 500);
+
+  };
+
+};
+/* =========================
+   NEXTGEN BUTTON ACTIONS
+========================= */
+
+// Get Free Quote → Free Site Survey
+document.querySelector(".nav-btn")?.addEventListener("click", function () {
+  document.querySelector("#survey")?.scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+
+// Explore Solar Solutions → Solutions
+document.querySelector(".secondary-btn")?.addEventListener("click", function () {
+  document.querySelector("#solutions")?.scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+
+// All Get Quote buttons → Free Site Survey
+document.querySelectorAll(".package-btn").forEach(function (button) {
+  button.addEventListener("click", function () {
+    document.querySelector("#survey")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+
+// Check Eligibility → Free Site Survey
+document.querySelector(".subsidy-btn")?.addEventListener("click", function () {
+  document.querySelector("#survey")?.scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+
+// Know More buttons
+document.querySelectorAll(".solution-btn").forEach(function (button) {
+  button.addEventListener("click", function () {
+    document.querySelector("#survey")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+  /* =========================
+   NEXTGEN CONTACT BUTTONS
+========================= */
+
+const nextGenPhone = "919468784992";
+
+// CALL NOW
+const callButton = document.querySelector('.contact-card a[href^="tel:"]');
+
+if (callButton) {
+  callButton.href = "tel:+" + nextGenPhone;
+}
+
+
+// WHATSAPP
+const whatsappButton = document.querySelector('.contact-card a[href^="https://wa.me/"]');
+
+if (whatsappButton) {
+  whatsappButton.href = "https://wa.me/" + nextGenPhone;
+  whatsappButton.target = "_blank";
+}
+
+
+// GET DIRECTIONS
+const directionButton = document.querySelector('.contact-card a[href="#"]');
+
+if (directionButton) {
+  directionButton.href =
+    "https://www.google.com/maps/search/?api=1&query=Banswara,Rajasthan";
+  directionButton.target = "_blank";
+}
+  // FORCE CALL BUTTON
+document.querySelectorAll(".contact-card").forEach(function(card) {
+
+  const title = card.querySelector("h3");
+
+  if (title && title.textContent.includes("Talk to Our Solar Expert")) {
+
+    card.onclick = function() {
+      window.location.href = "tel:+919468784992";
+    };
+
+  }
+
+});
+  // FORCE GOOGLE MAPS
+document.querySelectorAll(".contact-card").forEach(function(card) {
+
+  const title = card.querySelector("h3");
+
+  if (title && title.textContent.includes("Visit Our Office")) {
+
+    card.onclick = function() {
+      window.open(
+        "https://www.google.com/maps/search/?api=1&query=Banswara%2CRajasthan",
+        "_blank"
+      );
+    };
+
+  }
+
+});
+</script>
+    <script>
+const projectSlides =
+  document.querySelectorAll(".project-slide");
+const projectDots =
+  document.querySelectorAll(".project-dot");
+const projectPrev =
+  document.getElementById("projectPrev");
+const projectNext =
+  document.getElementById("projectNext");
+let projectCurrent = 0;
+/* SHOW SLIDE */
+function showProject(index) {
+  projectSlides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  projectDots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  projectSlides[index].classList.add("active");
+  projectDots[index].classList.add("active");
+  projectCurrent = index;
+}
+/* NEXT */
+projectNext.addEventListener("click", function () {
+  projectCurrent++;
+  if (projectCurrent >= projectSlides.length) {
+    projectCurrent = 0;
+  }
+  showProject(projectCurrent);
+});
+/* PREVIOUS */
+projectPrev.addEventListener("click", function () {
+  projectCurrent--;
+  if (projectCurrent < 0) {
+    projectCurrent = projectSlides.length - 1;
+  }
+  showProject(projectCurrent);
+});
+/* DOTS */
+projectDots.forEach((dot) => {
+  dot.addEventListener("click", function () {
+    const index =
+      Number(this.getAttribute("data-slide"));
+    showProject(index);
+  });
+});
+/* AUTO SLIDE */
+setInterval(function () {
+  projectCurrent++;
+  if (projectCurrent >= projectSlides.length) {
+    projectCurrent = 0;
+  }
+  showProject(projectCurrent);
+}, 5000);
+/* MOBILE SWIPE */
+let projectTouchStart = 0;
+const projectSlider =
+  document.querySelector(".project-slider");
+projectSlider.addEventListener("touchstart", function(e) {
+  projectTouchStart = e.touches[0].clientX;
+});
+projectSlider.addEventListener("touchend", function(e) {
+  const projectTouchEnd =
+    e.changedTouches[0].clientX;
+  const difference =
+    projectTouchStart - projectTouchEnd;
+  if (Math.abs(difference) > 50) {
+    if (difference > 0) {
+      projectNext.click();
+    } else {
+      projectPrev.click();
+    }
+  }
+});
+</script>
+    <section class="survey" id="survey">
+
+  <div class="survey-heading">
+
+    <span class="section-label">100% FREE</span>
+
+    <h2>
+      Book Your
+      <span>Free Site Survey</span>
+    </h2>
+
+    <p>
+      Share your details and our solar expert
+      will contact you shortly.
+    </p>
+
+  </div>
+
+
+  <div class="survey-form">
+
+    <div class="form-group">
+      <label>Your Name</label>
+      <input
+        type="text"
+        id="customerName"
+        placeholder="Enter your name"
+      >
+    </div>
+
+
+    <div class="form-group">
+      <label>Mobile Number</label>
+      <input
+        type="tel"
+        id="customerPhone"
+        placeholder="Enter mobile number"
+      >
+    </div>
+
+
+    <div class="form-group">
+      <label>City / Village</label>
+      <input
+        type="text"
+        id="customerLocation"
+        placeholder="Enter your location"
+      >
+    </div>
+
+
+    <div class="form-group">
+      <label>Property Type</label>
+
+      <select id="customerProperty">
+
+        <option value="">Select property type</option>
+
+        <option>Home</option>
+
+        <option>Shop / Business</option>
+
+        <option>Office</option>
+
+        <option>School / Institution</option>
+
+        <option>Other</option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-group full-width">
+
+      <label>Monthly Electricity Bill</label>
+
+      <input
+        type="number"
+        id="customerBill"
+        placeholder="Example: ₹3000"
+      >
+
+    </div>
+
+
+    <button
+      class="survey-btn"
+      id="surveySubmit"
+    >
+      Book My Free Site Survey →
+    </button>
+
+  </div>
+</section>
+    <section class="why-us" id="why-us">
+
+  <div class="why-heading">
+
+    <span class="section-label">WHY NEXTGEN SOLAR?</span>
+
+    <h2>
+      Solar Smarter.
+      <span>Save More.</span>
+    </h2>
+
+    <p>
+      Reliable solar solutions designed to help homes
+      and businesses save money and switch to clean energy.
+    </p>
+
+  </div>
+
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="why-icon">☀️</div>
+      <h3>Quality Solar Systems</h3>
+      <p>
+        High-quality solar solutions designed for
+        reliable long-term performance.
+      </p>
+    </div>
+
+
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Maximum Savings</h3>
+      <p>
+        Reduce your electricity bills and make the
+        most of available solar benefits.
+      </p>
+    </div>
+
+
+    <div class="why-card">
+      <div class="why-icon">🛠️</div>
+      <h3>Professional Installation</h3>
+      <p>
+        Proper installation by an experienced solar
+        installation team.
+      </p>
+    </div>
+
+
+    <div class="why-card">
+      <div class="why-icon">📞</div>
+      <h3>After-Sales Support</h3>
+      <p>
+        We're available to help you even after your
+        solar system is installed.
+      </p>
+    </div>
+
+
+    <div class="why-card">
+      <div class="why-icon">🏆</div>
+      <h3>Trusted Service</h3>
+      <p>
+        Transparent guidance from system selection
+        to installation and support.
+      </p>
+    </div>
+
+
+    <div class="why-card">
+      <div class="why-icon">🌱</div>
+      <h3>Clean Energy</h3>
+      <p>
+        Generate clean electricity and contribute to
+        a greener and more sustainable future.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+    <section class="reviews" id="reviews">
+
+  <div class="reviews-heading">
+
+    <span class="section-label">CUSTOMER REVIEWS</span>
+
+    <h2>
+      Our Customers
+      <span>Love Solar</span>
+    </h2>
+
+    <p>
+      Real experiences from customers who chose
+      NextGen Solar for their energy needs.
+    </p>
+
+  </div>
+
+
+  <div class="reviews-grid">
+
+    <div class="review-card">
+
+      <div class="stars">★★★★★</div>
+
+      <p>
+        "Very professional team. They explained the
+        complete solar process clearly and installation
+        was completed smoothly."
+      </p>
+
+      <div class="review-person">
+        <div class="review-avatar">R</div>
+
+        <div>
+          <strong>Rajesh Kumar</strong>
+          <small>Banswara</small>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="review-card">
+
+      <div class="stars">★★★★★</div>
+
+      <p>
+        "The team guided us properly about the solar
+        system and helped us understand our savings.
+        Very good service."
+      </p>
+
+      <div class="review-person">
+        <div class="review-avatar">A</div>
+
+        <div>
+          <strong>Arun Sharma</strong>
+          <small>Banswara</small>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="review-card">
+
+      <div class="stars">★★★★★</div>
+
+      <p>
+        "Good experience from consultation to
+        installation. The team was responsive and
+        professional."
+      </p>
+
+      <div class="review-person">
+        <div class="review-avatar">S</div>
+
+        <div>
+          <strong>Suresh Patel</strong>
+          <small>Rajasthan</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    <section class="contact" id="contact">
+
+  <div class="contact-heading">
+
+    <span class="section-label">GET IN TOUCH</span>
+
+    <h2>
+      Let's Go
+      <span>Solar</span>
+    </h2>
+
+    <p>
+      Have questions about solar? Our team is ready
+      to help you choose the right solution.
+    </p>
+
+  </div>
+
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <div class="contact-icon">📞</div>
+
+      <div>
+        <small>CALL US</small>
+        <h3>Talk to Our Solar Expert</h3>
+        <p>Get your solar questions answered.</p>
+      </div>
+
+      <a href="https://wa.me/919468784992" target="_blank">
+  📞 Call Now →
+</a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="contact-icon">💬</div>
+
+      <div>
+        <small>WHATSAPP</small>
+        <h3>Chat With Us</h3>
+        <p>Get a quick response from our team.</p>
+      </div>
+
+      <a href="https://wa.me/919468784992" target="_blank">
+        WhatsApp →
+      </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="contact-icon">📍</div>
+
+      <div>
+        <small>LOCATION</small>
+        <h3>Visit Our Office</h3>
+        <p>Banswara, Rajasthan</p>
+      </div>
+
+      <a
+  href="https://www.google.com/maps/dir/?api=1&destination=Banswara%2C%20Rajasthan"
+  target="_blank"
+  style="position:relative;z-index:99999;pointer-events:auto;"
+>
+  Get Directions →
+</a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="contact-icon">🕐</div>
+
+      <div>
+        <small>WORKING HOURS</small>
+        <h3>We're Available</h3>
+        <p>Monday – Saturday</p>
+      </div>
+
+      <span class="contact-time">
+        9:00 AM – 7:00 PM
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+    <footer class="footer">
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+
+      <h2>☀️ NextGen Solar</h2>
+
+      <p>
+        Powering a brighter and cleaner future with
+        reliable solar energy solutions.
+      </p>
+
+      <a href="#survey" class="footer-btn">
+        Book Free Site Survey →
+      </a>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3>Quick Links</h3>
+
+      <a href="#">Home</a>
+
+      <a href="#calculator">Solar Calculator</a>
+
+      <a href="#projects">Our Projects</a>
+
+      <a href="#why-us">Why Choose Us</a>
+
+      <a href="#reviews">Customer Reviews</a>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3>Services</h3>
+
+      <a href="#solutions">Residential Solar</a>
+
+      <a href="#solutions">Commercial Solar</a>
+
+      <a href="#calculator">Solar Consultation</a>
+
+      <a href="#survey">Free Site Survey</a>
+
+      <a href="#contact">Contact Us</a>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <h3>Get In Touch</h3>
+
+      <p>📍 Banswara, Rajasthan</p>
+
+      <p>📞 +91 9468784992</p>
+
+      <p>💬 WhatsApp Available</p>
+
+      <p>🕐 Mon – Sat: 9 AM – 7 PM</p>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 NextGen Solar Energy. All Rights Reserved.
+    </p>
+
+    <p>
+      Clean Energy • Smart Savings • Better Future
+    </p>
+
+  </div>
+
+</footer>
+  <!-- FLOATING CONTACT BUTTONS -->
+<div class="floating-contact">
+  <a
+    href="tel:+919468784992"
+    class="floating-call"
+    aria-label="Call NextGen Solar"
+  >
+    📞
+  </a>
+  <a
+    href="https://wa.me/919468784992"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="WhatsApp NextGen Solar"
+  >
+    💬
+  </a>
+</div>
+</div>
